@@ -13,21 +13,20 @@
 <body ng-controller="LunchCheckController">
    <div class="container">
      <h1>Lunch Checker</h1>
-
          <div class="form-group">
              <input id="lunch-menu" type="text" ng-model="menu"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control" ng-style="myStyle">
+             class="form-control">
              <br>
-             <label>We do NOT consider empty item</label>
+             <label>We do NOT consider empty item.</label>
+             <label>Currently {{Num}} Item(s) in this list</label>
          </div>
          <div class="form-group">
-             <button class="btn btn-default" ng-click="TestMenu()" ng-click="myStyle={color:'red'}">Check If Too Much</button>
+             <button class="btn btn-default"  ng-click="TestMenu()">Check If Too Much</button>
          </div>
          <div class="form-group message" >
            {{result}} <!-- Your message can go here. -->
          </div>
    </div>
-
 </body>
 </html>
