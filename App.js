@@ -5,14 +5,14 @@ angular.module('LunchCheck', []).controller('LunchCheckController', LunchCheckCo
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
 
-  var count=-1,parts="";
   $scope.menu="";
   $scope.TestMenu= function () {
     calculate($scope.menu);
   };
 
   function calculate(string) {
-
+    var count=-1,parts="";
+    
     while (string.match(",,")) {
       string = string.replace(/,,/i, ',');
       string = string.replace(/ /i, ',');
